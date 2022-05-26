@@ -32,6 +32,7 @@ body {
   margin-left: -10px;
   width: 101%;
   padding: 10px 10px;
+  box-shadow: 5px 10px 8px #c0bebe;
 }
 
 .nav {
@@ -41,6 +42,7 @@ body {
 
 .logo {
   width: 40%;
+  text-align: center;
 }
 
 .nav-ul {
@@ -53,7 +55,7 @@ body {
   margin-left: 60px;
 }
 
-.nav-list-campaign{
+.nav-list-campaign {
   color: #ec5242;
   border: solid 4px #ec5242;
   padding: 10px 10px;
@@ -61,5 +63,5 @@ body {
 }
 
 .nav-list:hover {
-  color: grey
+  color: grey;
 }
