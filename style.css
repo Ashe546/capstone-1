@@ -1,54 +1,65 @@
 body {
-    background-color: #D3D3D3;
+  background-color: #d3d3d3;
 }
 
 .header {
-    display: flex;
-    flex-direction: row-reverse;
-    background-color: #272A31;
-    margin-top: -10px;
-    margin-left: -10px;
-    width: 101%;
-    padding: 3px;
+  display: flex;
+  flex-direction: row-reverse;
+  background-color: #272a31;
+  margin-top: -10px;
+  margin-left: -10px;
+  width: 101%;
+  padding: 3px;
 }
 
 .header-link {
-    display: flex;
-    list-style-type: none;
-    justify-content: space-between; 
-    width: 35%;
-    color: #D3D3D3;
-    margin-right: 300px;
-    font-size: x-small;  
+  display: flex;
+  list-style-type: none;
+  justify-content: space-between;
+  width: 35%;
+  color: #d3d3d3;
+  margin-right: 300px;
+  font-size: x-small;
 }
 
 .header-list:hover {
-    color: white;
+  color: white;
 }
 
 .nav-div {
-    background-color: white;
-    margin-top: -10px;
-    margin-left: -10px;
-    width: 101%;
-    padding: 20px 20px;
+  background-color: white;
+  margin-top: -10px;
+  margin-left: -10px;
+  width: 101%;
+  padding: 10px 10px;
 }
 
 .nav {
-    display: flex;
-    flex-direction: row; 
+  display: flex;
+  flex-direction: row;
 }
 
 .logo {
-    width: 40%;
+  width: 40%;
 }
 
 .nav-ul {
-    display: flex;
-    list-style-type: none;
-    justify-content: space-between; 
+  display: flex;
+  list-style-type: none;
+  justify-content: space-between;
 }
 
 .nav-list {
-    margin-left: 60px;
+  margin-left: 60px;
+}
+
+.nav-list-campaign{
+  color: #ec5242;
+  border: solid 4px #ec5242;
+  padding: 10px 10px;
+  margin-top: -10px;
+}
+
+.nav-list:hover {
+  color: grey
 }
