@@ -30,7 +30,7 @@ body {
   background-color: white;
   margin-top: -10px;
   margin-left: -10px;
-  width: 101%;
+  width: 100%;
   padding: 10px 10px;
   box-shadow: 5px 10px 8px #c0bebe;
 }
@@ -91,6 +91,7 @@ body {
   margin-top: -35px;
   background-color: #d3d3d3;
 }
+
 .main-img {
   position: relative;
   margin-left: 500px;
@@ -102,6 +103,9 @@ body {
 }
 
 .main-program {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   background-color: #272a31;
   margin-top: -10px;
   margin-left: -10px;
@@ -112,19 +116,18 @@ body {
 .Program-header {
   width: fit-content;
   color: #c0bebe;
-  margin-left: 45%;
-  border-bottom:solid 1px #ec5242;
+  border-bottom: solid 1px #ec5242;
 }
 
 .program-board {
   display: flex;
   flex-direction: row;
   justify-content: center;
-
 }
 
 .board {
   max-width: 8%;
+  max-height: 250px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -135,4 +138,9 @@ body {
 
 .program-icon {
   max-width: 60px;
+}
+
+.program-footer{
+  color: #c0bebe;
+  border-bottom:solid 1px #c0bebe;
 }
