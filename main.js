@@ -1,81 +1,94 @@
-const humburger = document.querySelector('.hamburger');
+// toggle mobile menu
+const menu = document.getElementById('menu');
+const menuLinks = document.querySelectorAll('.menu-list a');
+const menuToggler = document.getElementById('menu-toggler');
+const closeMenuBtn = document.getElementById('menu-close-btn');
 
-function changeClass() {
-  document.querySelector('.nav').classList.toggle('active');
-  humburger.classList.toggle('active');
+function toggleMenu(event, prevent = true) {
+  if (prevent) event.preventDefault();
+  document.body.classList.toggle('no-scroll');
+  menu.classList.toggle('show');
 }
 
-humburger.addEventListener('click', changeClass);
+menuToggler.addEventListener('click', (event) => {
+  toggleMenu(event);
+});
 
-document.querySelectorAll('.nav-list').forEach((n) => n.addEventListener('click', () => {
-  humburger.classList.remove('active');
-  document.querySelector('.nav').classList.remove('active');
-}));
+closeMenuBtn.addEventListener('click', (event) => {
+  toggleMenu(event);
+});
 
-const persons = [
+menuLinks.forEach((link) => link.addEventListener(
+  'click',
+  (event) => toggleMenu(event, false),
+));
+
+// Dynamic Speakers insertion
+const speakers = [
   {
-    name: 'Ashe',
-    img: './image/person11.jpg',
-    position: 'Assistant Professor Department of Mechanical Engineering, American University in Dubai',
-    description: 'He is the recipient of a PhD in Systems Design Engineering in 2012 from the University of Waterloo in Canadatice in IT.',
-    class: '',
+    name: 'Addisu Haile',
+    title: 'Assistant Professor Department of Mechanical Engineering, American University in Dubai',
+    image: 'person11.jpg',
+    bio: 'He is the recipient of a PhD in Systems Design Engineering in 2012 from the University of Waterloo in Canadatice in IT.',
   },
-
   {
-    name: 'Mula',
-    img: './image/person12.jpg',
-    position: 'Assistant Professor Department of Mechanical Engineering, American University in Dubai',
-    description: 'He is the recipient of a PhD in Systems Design Engineering in 2012 from the University of Waterloo in Canadatice in IT.',
-    class: '',
+    name: 'Pierre Chambon',
+    title: 'Pierre Chambon is professor at the University of Strasbourgs Institute for Advanced Study, honorary professor at the Collège de France, and emeritus professor at the Faculty of Medicine of the University of Strasbourg.',
+    image: 'person12.jpg',
+    bio: 'He is the founder and former director of the Institute for Genetics and Cellular and Molecular Biology (IGBMC)',
   },
-
   {
-    name: 'Abel',
-    img: './image/person13.jpg',
-    position: 'Assistant Professor Department of Mechanical Engineering, American University in Dubai',
-    description: 'He is the recipient of a PhD in Systems Design Engineering in 2012 from the University of Waterloo in Canadatice in IT.',
-    class: 'none',
+    name: 'Craig C. Mello',
+    title: 'Craig C. Mello is a biologist and professor of molecular medicine at the University of Massachusetts.',
+    image: 'person13.jpg',
+    bio: 'Mello earned his Ph.D. from Harvard University and was a postdoctoral fellow at the Fred Hutchinson Cancer Research Center.',
   },
-
   {
-    name: 'Aman',
-    img: './image/person14.jpg',
-    position: 'Assistant Professor Department of Mechanical Engineering, American University in Dubai',
-    description: 'He is the recipient of a PhD in Systems Design Engineering in 2012 from the University of Waterloo in Canadatice in IT.',
-    class: 'none',
+    name: 'Jack W. Szostak',
+    title: 'Jack W. Szostak is a biologist and a professor of genetics at Harvard Medical School.',
+    image: 'person14.jpg',
+    bio: 'Szostak earned his Ph.D. in biochemistry at Cornell University. Subsequently, he started his own lab at the Sydney Farber Cancer Institute at Harvard Medical School.',
   },
-
   {
-    name: 'Bini',
-    img: './image/person11.jpg',
-    position: 'Assistant Professor Department of Mechanical Engineering, American University in Dubai',
-    description: 'He is the recipient of a PhD in Systems Design Engineering in 2012 from the University of Waterloo in Canadatice in IT.',
-    class: 'none',
+    name: 'Abel Desalegne',
+    title: 'Software Enginner',
+    image: 'person155.jpg',
+    bio: 'He is a motivation speaker and Inspired a lot of people.',
   },
-
   {
-    name: 'Besa',
-    img: '/image/person16.jpg',
-    position: 'Assistant Professor Department of Mechanical Engineering, American University in Dubai',
-    description: 'He is the recipient of a PhD in Systems Design Engineering in 2012 from the University of Waterloo in Canadatice in IT.',
-    class: 'none',
+    name: 'Daniel',
+    title: 'Postdoctoral Researcher, Department of Biology, University of Pennsylvania.',
+    image: 'person16.jpg',
+    bio: 'Daniel has made contributions to the field of genetics. He is credited with the construction of the world first yeast artificial chromosome.',
   },
 ];
 
-const section = document.getElementById('person-wrap');
-persons.forEach((person) => {
-  const div = document.createElement('div');
-  div.className = `persons ${person.class}`;
-  div.innerHTML = `<div class="person">
-    <div class="person-img">
-        <img src= ${person.img} alt="person" width="100px" height="100px">
+const speakersPlaceHolder = document.querySelector('#speakers .persons');
+
+speakers.forEach((speaker, index) => {
+  speakersPlaceHolder.innerHTML += `
+  <div class="person ${index > 1 ? 'mobile-hide' : ''}">
+    <div class="person-graphic">
+      <img src="./image/${speaker.image}" alt="" />
     </div>
-    <div class="person-detail">
-        <h1>${person.name}</h1>
-        <p class="person-position">${person.position}</p>
-        <hr class="person-hr">
-        <p>${person.description}</p>
+    <div class="person-info">
+      <h4 class="person-name">${speaker.name}</h4>
+      <p class="person-title"><em>${speaker.title}</em></p>
+      <p class="person-bio">${speaker.bio}</p>
     </div>
-    </div>`;
-  section.appendChild(div);
+  </div>
+  `;
 });
+
+// Show more speackers by clicking on more button
+const moreSpeakerButton = document.getElementById('toggle-more-speakers');
+moreSpeakerButton.addEventListener(
+  'click',
+  (event) => {
+    event.preventDefault();
+    document.querySelectorAll('.mobile-hide').forEach((el) => {
+      el.classList.toggle('mobile-hide');
+    });
+    moreSpeakerButton.style.display = 'none';
+  },
+);
