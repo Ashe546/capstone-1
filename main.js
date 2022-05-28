@@ -42,7 +42,7 @@ const persons = [
     img: './image/person14.jpg',
     position: 'Assistant Professor Department of Mechanical Engineering, American University in Dubai',
     description: 'He is the recipient of a PhD in Systems Design Engineering in 2012 from the University of Waterloo in Canadatice in IT.',
-    class: 'none', 
+    class: 'none',
   },
 
   {
