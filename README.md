@@ -35,4 +35,3 @@ Give a ⭐️ if you like this project!
 
 ## Acknowledgments
 
-- Original design idea by Cindy Shin
