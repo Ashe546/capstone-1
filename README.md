@@ -35,3 +35,4 @@ Give a ⭐️ if you like this project!
 
 ## Acknowledgments
 
+- Original design idea by [Cindy Shin](https://www.behance.net/gallery/29845175/CC-Global-Summit-2015) in Behance.
