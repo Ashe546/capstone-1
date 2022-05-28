@@ -14,8 +14,8 @@
 
 ## Live Demo (if available)
 
-[Live Demo Link](https://ashe546.github.io/capstone-1/)
-[Loom video Link](https://www.loom.com/share/1cf415878bb74661b624230efa4ca05e)
+- [Live Demo Link](https://ashe546.github.io/capstone-1/)
+- [Loom video Link](https://www.loom.com/share/1cf415878bb74661b624230efa4ca05e)
 
 
 ## Authors
