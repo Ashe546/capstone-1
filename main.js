@@ -67,15 +67,15 @@ persons.forEach((person) => {
   const div = document.createElement('div');
   div.className = `persons ${person.class}`;
   div.innerHTML = `<div class="person">
-        <div class="person-img">
-            <img src= ${person.img} alt="person" width="100px" height="100px">
-        </div>
-        <div class="person-detail">
-            <h1>${person.name}</h1>
-            <p class="person-position">${person.position}</p>
-            <hr class="person-hr">
-            <p>${person.description}</p>
-        </div>
+    <div class="person-img">
+        <img src= ${person.img} alt="person" width="100px" height="100px">
+    </div>
+    <div class="person-detail">
+        <h1>${person.name}</h1>
+        <p class="person-position">${person.position}</p>
+        <hr class="person-hr">
+        <p>${person.description}</p>
+    </div>
     </div>`;
   section.appendChild(div);
 });
