@@ -13,56 +13,54 @@ document.querySelectorAll('.nav-list').forEach((n) => n.addEventListener('click'
 }));
 
 const persons = [
-{
-  name: 'ashe',
-  img: './image/person11.jpg',
-  position: 'dgw frqwuyF WQYRGFY y TREWFVuyf fhvfuySAR FYrikfi',
-  description: 'kae eqf fygyeg 3t yg3t g 3hft h3fg 8fb3y fg3y b3f',
-},
+  {
+    name: 'ashe',
+    img: './image/person11.jpg',
+    position: 'dgw frqwuyF WQYRGFY y TREWFVuyf fhvfuySAR FYrikfi',
+    description: 'kae eqf fygyeg 3t yg3t g 3hft h3fg 8fb3y fg3y b3f',
+  },
 
-{
-  name: 'ashe',
-  img: './image/person11.jpg',
-  position: 'dgw frqwuyF WQYRGFY y TREWFVuyf fhvfuySAR FYrikfi',
-  description: 'kae eqf fygyeg 3t yg3t g 3hft h3fg 8fb3y fg3y b3f',
-},
+  {
+    name: 'ashe',
+    img: './image/person11.jpg',
+    position: 'dgw frqwuyF WQYRGFY y TREWFVuyf fhvfuySAR FYrikfi',
+    description: 'kae eqf fygyeg 3t yg3t g 3hft h3fg 8fb3y fg3y b3f',
+  },
 
-{
-  name: 'ashe',
-  img: './image/person11.jpg',
-  position: 'dgw frqwuyF WQYRGFY y TREWFVuyf fhvfuySAR FYrikfi',
-  description: 'kae eqf fygyeg 3t yg3t g 3hft h3fg 8fb3y fg3y b3f',
-},
+  {
+    name: 'ashe',
+    img: './image/person11.jpg',
+    position: 'dgw frqwuyF WQYRGFY y TREWFVuyf fhvfuySAR FYrikfi',
+    description: 'kae eqf fygyeg 3t yg3t g 3hft h3fg 8fb3y fg3y b3f',
+  },
 
-{
-  name: 'ashe',
-  img: './image/person11.jpg',
-  position: 'dgw frqwuyF WQYRGFY y TREWFVuyf fhvfuySAR FYrikfi',
-  description: 'kae eqf fygyeg 3t yg3t g 3hft h3fg 8fb3y fg3y b3f',
-},
+  {
+    name: 'ashe',
+    img: './image/person11.jpg',
+    position: 'dgw frqwuyF WQYRGFY y TREWFVuyf fhvfuySAR FYrikfi',
+    description: 'kae eqf fygyeg 3t yg3t g 3hft h3fg 8fb3y fg3y b3f',
+  },
 
-{
-  name: 'ashe',
-  img: './image/person11.jpg',
-  position: 'dgw frqwuyF WQYRGFY y TREWFVuyf fhvfuySAR FYrikfi',
-  description: 'kae eqf fygyeg 3t yg3t g 3hft h3fg 8fb3y fg3y b3f',
-},
+  {
+    name: 'ashe',
+    img: './image/person11.jpg',
+    position: 'dgw frqwuyF WQYRGFY y TREWFVuyf fhvfuySAR FYrikfi',
+    description: 'kae eqf fygyeg 3t yg3t g 3hft h3fg 8fb3y fg3y b3f',
+  },
 
-{
-  name: 'ashe',
-  img: '/image/person11.jpg',
-  position: 'dgw frqwuyF WQYRGFY y TREWFVuyf fhvfuySAR FYrikfi',
-  description: 'kae eqf fygyeg 3t yg3t g 3hft h3fg 8fb3y fg3y b3f',
-}
-]
+  {
+    name: 'ashe',
+    img: '/image/person11.jpg',
+    position: 'dgw frqwuyF WQYRGFY y TREWFVuyf fhvfuySAR FYrikfi',
+    description: 'kae eqf fygyeg 3t yg3t g 3hft h3fg 8fb3y fg3y b3f',
+  },
+];
 
 const section = document.getElementById('person-wrap');
-persons.forEach((person, index) => {
-
-
-const div = document.createElement('div');
-  div.className = 'persons';
-  div.innerHTML = `<div class="person">
+persons.forEach((person) => {
+  const div = document.createElement('div');
+    div.className = 'persons';
+    div.innerHTML = `<div class="person">
         <div class="person-img">
             <img src= ${person.img} alt="person" width="100px" height="100px">
         </div>
