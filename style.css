@@ -236,8 +236,8 @@ body {
 }
 
 @media (max-width: 768px) {
-   .header {
-  display: none;
+  .header {
+    display: none;
   }
 
   .nav {

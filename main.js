@@ -59,8 +59,8 @@ const persons = [
 const section = document.getElementById('person-wrap');
 persons.forEach((person) => {
   const div = document.createElement('div');
-    div.className = 'persons';
-    div.innerHTML = `<div class="person">
+  div.className = 'persons';
+  div.innerHTML = `<div class="person">
         <div class="person-img">
             <img src= ${person.img} alt="person" width="100px" height="100px">
         </div>
